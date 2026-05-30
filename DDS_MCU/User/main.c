@@ -110,7 +110,6 @@ void SWEEP_show(){
 }
 
 void square_show(){
-    //OLED_ShowString(0,0,"Square wave");
     OLED_ShowChar(0,2,'A');
     OLED_ShowChar(8,2,':');
     OLED_ShowString(16,2,"Hz");
@@ -211,8 +210,6 @@ int main(void)
                     square_show();
                     OLED_ShowNum(0,0,uart_freq,6,16);
                     OLED_ShowString(54,0,"Hz ");
-                    //OLED_ShowNum(0,4,square_duty,3,16);
-                    //OLED_ShowString(48,4,"%  ");
                     UART_send_square_params(uart_freq, 50);
                     delay_ms(50);
                 }
@@ -414,7 +411,6 @@ int main(void)
         // ------------------ Square Wave (State 6) ------------------
         else if(OLED_state == 6)
         {
-						//OLED_Clear();
             key = getKeyValue();
             if(key != 'N')
             {

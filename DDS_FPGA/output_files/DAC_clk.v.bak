@@ -1,8 +1,0 @@
-module DAC_clk (
-    input         clk_50m,   // FPGA 输入 50MHz 时钟
-    output        dac_clk    // 输出 50MHz 给 DAC904 DATACLK
-);
-
-assign dac_clk = clk_50m;
-
-endmodule 
